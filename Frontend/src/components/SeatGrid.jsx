@@ -37,7 +37,7 @@ const handleCancel = () =>{
         {selectedSeat && (
             <div className="modal-overlay">
                 <div className="modal">
-                    <p>Are you sure you want to reserve the seat {selectedSeat}</p>
+                    <p>Are you sure you want to reserve the seat {selectedSeat} ?</p>
                     <div className="modal-buttons">
                     <button className="ok-button" onClick={handleConfirm}>
                         OK
