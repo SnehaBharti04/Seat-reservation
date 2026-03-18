@@ -11,8 +11,18 @@ const app = express()
 const server = http.createServer(app)
 
 const io = new Server(server, {
-    cors: {origin: "*"}
-})
+    cors: {
+        origin: "https://seat-reservation-system-sneha.netlify.app",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true
+    }
+});
+
+  app.use(cors({
+    origin: "https://seat-reservation-system-sneha.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 
 app.use(cors())
 app.use(express.json())
